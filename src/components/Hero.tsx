@@ -36,7 +36,7 @@ const Hero = () => {
           
           {/* Name */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient">
-            Desarrollador Web
+            Sebastian Martinez
           </h1>
           
           {/* Tagline */}
@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
               size="lg"
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group"
+              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group text-white"
               onClick={() => scrollToSection('projects')}
             >
               Ver mis proyectos
@@ -73,19 +73,23 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-center">
+            {/*
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">5+</div>
               <div className="text-sm text-muted-foreground">Años de experiencia</div>
             </div>
+            */}
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">5+</div>
               <div className="text-sm text-muted-foreground">Proyectos completados</div>
             </div>
+            {/*
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">30+</div>
               <div className="text-sm text-muted-foreground">Clientes satisfechos</div>
             </div>
+            */}
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-2">24/7</div>
               <div className="text-sm text-muted-foreground">Soporte disponible</div>

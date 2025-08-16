@@ -35,8 +35,8 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Plataforma de comercio electrónico completa con panel de administración, pagos integrados y gestión de inventario.',
+      title: 'Prueba',
+      description: 'Description Prueba',
       image: '/api/placeholder/400/300',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       category: 'web',
@@ -46,10 +46,10 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y analíticas.',
+      title: 'Prueba',
+      description: 'Description Prueba',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'Firebase', 'Material-UI', 'WebSocket'],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       category: 'web',
       github: 'https://github.com',
       live: 'https://example.com',
@@ -57,54 +57,31 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Mobile Banking App',
-      description: 'Aplicación bancaria móvil con autenticación biométrica, transferencias y gestión de cuentas.',
+      title: 'Prueba',
+      description: 'Description Prueba',
       image: '/api/placeholder/400/300',
-      technologies: ['React Native', 'TypeScript', 'Redux', 'Biometrics'],
-      category: 'mobile',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      category: 'backend',
       github: 'https://github.com',
       live: 'https://example.com',
       featured: true
     },
     {
       id: 4,
-      title: 'Analytics Dashboard',
-      description: 'Dashboard de analíticas en tiempo real con gráficos interactivos y reportes automatizados.',
+      title: 'Prueba',
+      description: 'Description Prueba',
       image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'D3.js', 'Python', 'MongoDB'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'API Gateway',
-      description: 'Gateway de API escalable con autenticación, rate limiting y monitoreo de performance.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Node.js', 'Express', 'Redis', 'Docker'],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       category: 'backend',
       github: 'https://github.com',
       live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'IoT Dashboard',
-      description: 'Panel de control para dispositivos IoT con monitoreo en tiempo real y alertas.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Angular', 'MQTT', 'InfluxDB', 'Grafana'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
+      featured: true
     },
   ];
 
   const categories = [
     { id: 'all', label: 'Todos' },
     { id: 'web', label: 'Web' },
-    { id: 'mobile', label: 'Móvil' },
     { id: 'backend', label: 'Backend' },
   ];
 
@@ -202,7 +179,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Other Projects */}
+        {/* Other Projects
         {filteredProjects.filter(project => !project.featured).length > 0 && (
           <div className="fade-in-up">
             <h3 className="text-2xl font-bold mb-8">Otros proyectos</h3>
@@ -242,7 +219,7 @@ const Projects = () => {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Hiring from '@/components/Hiring';
 import Contact from '@/components/Contact';
-// import Blog from '@/components/Blog';
+import Blog from '@/components/Blog';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
       <About />
       <Projects />
       <Hiring />
-      {/* <Blog /> */}
+      <Blog />
       <Contact />
       <Footer />
     </div>

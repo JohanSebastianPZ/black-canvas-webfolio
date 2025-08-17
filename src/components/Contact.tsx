@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -50,56 +49,35 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
-    try {
-      await emailjs.send(
-        'service_reb4gv9', // Service ID
-        'template_allkuvh', // Template ID
-        {
-          name: formData.name,
-          email: formData.email, // Este se usará en Reply-To
-          subject: formData.subject,
-          message: formData.message
-        },
-        'jOpHaw-DDzWg_OzKB' // Public KEY
-      );
-  
+
+    // Simular envío de formulario
+    setTimeout(() => {
       toast({
         title: '¡Mensaje enviado!',
         description: 'Te responderé lo antes posible. ¡Gracias por contactarme!',
       });
-  
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      toast({
-        title: 'Error al enviar',
-        description: 'No se pudo enviar el mensaje. Intenta más tarde.',
-        variant: 'destructive',
-      });
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1500);
   };
-  
-  
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'johansebastian627@gmail.com',
-      link: 'mailto:johansebastian627@gmail.com'
+      value: 'contacto@tudominio.com',
+      link: 'mailto:contacto@tudominio.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Teléfono',
-      value: '+34 611 877 077',
-      link: 'tel:+34611877077'
+      value: '+57 300 123 4567',
+      link: 'tel:+573001234567'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Ubicación',
-      value: 'Barcelona, España',
+      value: 'Medellín, Colombia',
       link: 'https://maps.google.com'
     }
   ];
@@ -108,7 +86,7 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       name: 'GitHub',
-      url: 'https://github.com/JohanSebastianPZ',
+      url: 'https://github.com/tu-usuario',
       color: 'hover:text-purple-400'
     },
     {
@@ -214,12 +192,12 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-white hover:opacity-90"
+                  className="w-full bg-gradient-primary hover:opacity-90"
                   size="lg"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2 "></div>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
                       Enviando...
                     </>
                   ) : (
@@ -241,7 +219,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-foreground">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
                       {item.icon}
                     </div>
                     <div>
@@ -258,7 +236,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links
+            {/* Social Links */}
             <div className="fade-in-up">
               <h3 className="text-2xl font-bold mb-6">Sígueme</h3>
               <div className="flex gap-4">
@@ -274,7 +252,7 @@ const Contact = () => {
                   </Button>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             {/* Response Time */}
             <div className="fade-in-up">
@@ -304,7 +282,7 @@ const Contact = () => {
                     Agenda una reunión de 30 minutos para discutir tu proyecto
                   </p>
                   <Button
-                    onClick={() => window.open('https://calendly.com/johansebastian627', '_blank')}
+                    onClick={() => window.open('https://calendly.com/tu-usuario', '_blank')}
                     className="w-full"
                   >
                     Agendar reunión

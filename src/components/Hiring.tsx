@@ -38,47 +38,47 @@ const Hiring = () => {
     }
   };
 
-  // const services = [
-  //   {
-  //     title: 'Desarrollo Frontend',
-  //     description: 'Interfaces modernas y responsivas con React, Vue.js o Angular',
-  //     price: 'Desde $30/hora',
-  //     duration: '2-6 semanas',
-  //     features: [
-  //       'Diseño responsivo',
-  //       'Optimización SEO',
-  //       'Animaciones suaves',
-  //       'Pruebas unitarias',
-  //       'Documentación completa'
-  //     ]
-  //   },
-  //   {
-  //     title: 'Desarrollo Backend',
-  //     description: 'APIs robustas y escalables con Node.js, Python o PHP',
-  //     price: 'Desde $35/hora',
-  //     duration: '3-8 semanas',
-  //     features: [
-  //       'API REST/GraphQL',
-  //       'Base de datos optimizada',
-  //       'Autenticación segura',
-  //       'Monitoreo y logs',
-  //       'Documentación API'
-  //     ]
-  //   },
-  //   {
-  //     title: 'Aplicación Completa',
-  //     description: 'Desarrollo fullstack desde el concepto hasta el despliegue',
-  //     price: 'Desde $2500',
-  //     duration: '6-12 semanas',
-  //     features: [
-  //       'Desarrollo completo',
-  //       'Diseño UI/UX',
-  //       'Hosting y dominio',
-  //       'SSL y seguridad',
-  //       'Soporte 3 meses'
-  //     ]
-  //   }
-  // ];
+  const services = [
+    {
+      title: 'Desarrollo Frontend',
+      description: 'Interfaces modernas y responsivas con React, Vue.js o Angular',
+      price: 'Desde $30/hora',
+      duration: '2-6 semanas',
+      features: [
+        'Diseño responsivo',
+        'Optimización SEO',
+        'Animaciones suaves',
+        'Pruebas unitarias',
+        'Documentación completa'
+      ]
+    },
+    {
+      title: 'Desarrollo Backend',
+      description: 'APIs robustas y escalables con Node.js, Python o PHP',
+      price: 'Desde $35/hora',
+      duration: '3-8 semanas',
+      features: [
+        'API REST/GraphQL',
+        'Base de datos optimizada',
+        'Autenticación segura',
+        'Monitoreo y logs',
+        'Documentación API'
+      ]
+    },
+    {
+      title: 'Aplicación Completa',
+      description: 'Desarrollo fullstack desde el concepto hasta el despliegue',
+      price: 'Desde $2500',
+      duration: '6-12 semanas',
+      features: [
+        'Desarrollo completo',
+        'Diseño UI/UX',
+        'Hosting y dominio',
+        'SSL y seguridad',
+        'Soporte 3 meses'
+      ]
+    }
+  ];
 
   const process = [
     {
@@ -111,11 +111,11 @@ const Hiring = () => {
     { day: 'Lunes - Viernes', time: '9:00 AM - 6:00 PM' },
     { day: 'Respuesta promedio', time: '< 2 horas' },
     { day: 'Disponibilidad', time: 'Inmediata' },
-    { day: 'Zona horaria', time: 'España (Barcelona)' }
+    { day: 'Zona horaria', time: 'GMT-5 (Colombia)' }
   ];
 
   return (
-    <section id="hiring" ref={sectionRef} className="bg-accent/5">
+    <section id="hiring" ref={sectionRef} className="py-20 bg-accent/5">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -128,7 +128,7 @@ const Hiring = () => {
         </div>
 
         {/* Services */}
-        {/* <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="hover-lift glass-effect border-border/20 fade-in-up">
               <CardHeader>
@@ -170,7 +170,7 @@ const Hiring = () => {
               </CardContent>
             </Card>
           ))}
-        </div> */}
+        </div>
 
         {/* Process */}
         <div className="mb-16 fade-in-up">
@@ -181,7 +181,7 @@ const Hiring = () => {
             {process.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <div className="text-primary-foreground">
                       {step.icon}
                     </div>
@@ -229,7 +229,7 @@ const Hiring = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open('https://calendly.com/johansebastian627', '_blank')}
+                onClick={() => window.open('https://calendly.com/tu-usuario', '_blank')}
                 className="w-full"
               >
                 Agendar reunión

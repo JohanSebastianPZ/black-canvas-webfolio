@@ -32,90 +32,109 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  const projects = [
-    {
-      id: 1,
-      title: 'E-commerce Platform',
-      description: 'Plataforma de comercio electrónico completa con panel de administración, pagos integrados y gestión de inventario.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y analíticas.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Firebase', 'Material-UI', 'WebSocket'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Mobile Banking App',
-      description: 'Aplicación bancaria móvil con autenticación biométrica, transferencias y gestión de cuentas.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React Native', 'TypeScript', 'Redux', 'Biometrics'],
-      category: 'mobile',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Analytics Dashboard',
-      description: 'Dashboard de analíticas en tiempo real con gráficos interactivos y reportes automatizados.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'D3.js', 'Python', 'MongoDB'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'API Gateway',
-      description: 'Gateway de API escalable con autenticación, rate limiting y monitoreo de performance.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Node.js', 'Express', 'Redis', 'Docker'],
-      category: 'backend',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'IoT Dashboard',
-      description: 'Panel de control para dispositivos IoT con monitoreo en tiempo real y alertas.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Angular', 'MQTT', 'InfluxDB', 'Grafana'],
-      category: 'web',
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-  ];
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     title: 'E-commerce Platform',
+  //     description: 'Plataforma de comercio electrónico completa con panel de administración, pagos integrados y gestión de inventario.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+  //     category: 'web',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: true
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Task Management App',
+  //     description: 'Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y analíticas.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['React', 'Firebase', 'Material-UI', 'WebSocket'],
+  //     category: 'web',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: true
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Mobile Banking App',
+  //     description: 'Aplicación bancaria móvil con autenticación biométrica, transferencias y gestión de cuentas.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['React Native', 'TypeScript', 'Redux', 'Biometrics'],
+  //     category: 'mobile',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: true
+  //   },
+  //   {
+  //     id: 4,
+  //     title: 'Analytics Dashboard',
+  //     description: 'Dashboard de analíticas en tiempo real con gráficos interactivos y reportes automatizados.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['Vue.js', 'D3.js', 'Python', 'MongoDB'],
+  //     category: 'web',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: false
+  //   },
+  //   {
+  //     id: 5,
+  //     title: 'API Gateway',
+  //     description: 'Gateway de API escalable con autenticación, rate limiting y monitoreo de performance.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['Node.js', 'Express', 'Redis', 'Docker'],
+  //     category: 'backend',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: false
+  //   },
+  //   {
+  //     id: 6,
+  //     title: 'IoT Dashboard',
+  //     description: 'Panel de control para dispositivos IoT con monitoreo en tiempo real y alertas.',
+  //     image: '/api/placeholder/400/300',
+  //     technologies: ['Angular', 'MQTT', 'InfluxDB', 'Grafana'],
+  //     category: 'web',
+  //     github: 'https://github.com',
+  //     live: 'https://example.com',
+  //     featured: false
+  //   },
+  // ];
 
-  const categories = [
-    { id: 'all', label: 'Todos' },
-    { id: 'web', label: 'Web' },
-    { id: 'mobile', label: 'Móvil' },
-    { id: 'backend', label: 'Backend' },
-  ];
+  // const categories = [
+  //   { id: 'all', label: 'Todos' },
+  //   { id: 'web', label: 'Web' },
+  //   { id: 'mobile', label: 'Móvil' },
+  //   { id: 'backend', label: 'Backend' },
+  // ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  // const filteredProjects = activeFilter === 'all' 
+  //   ? projects 
+  //   : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20 bg-background">
+    <section id="projects" ref={sectionRef} className=" bg-background">
+      <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 fade-in-up">
+            Proyectos destacados
+          </h2>
+          {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto fade-in-up">
+            Una selección de mis trabajos más representativos y las tecnologías utilizadas
+          </p> */}
+        </div>
+      <div className="max-w-3xl mx-auto px-4">
+  <div className="text-center py-10 border rounded-2xl bg-accent/10">
+    <h3 className="text-2xl font-bold mb-4">🚧 Proyectos en camino</h3>
+    <p className="text-muted-foreground">
+      Estoy aprendiendo y trabajando en mis primeros proyectos. Muy pronto podrás verlos aquí.
+    </p>
+  </div>
+</div>
+
+
+      {/*
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Header 
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 fade-in-up">
             Proyectos destacados
@@ -125,7 +144,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
+        {/* Filter Buttons 
         <div className="flex flex-wrap justify-center gap-4 mb-12 fade-in-up">
           {categories.map((category) => (
             <Button
@@ -140,7 +159,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Featured Projects */}
+        {/* Featured Projects 
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 fade-in-up">Proyectos destacados</h3>
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -202,7 +221,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Other Projects */}
+        {/* Other Projects 
         {filteredProjects.filter(project => !project.featured).length > 0 && (
           <div className="fade-in-up">
             <h3 className="text-2xl font-bold mb-8">Otros proyectos</h3>
@@ -244,6 +263,7 @@ const Projects = () => {
           </div>
         )}
       </div>
+       */}
     </section>
   );
 };

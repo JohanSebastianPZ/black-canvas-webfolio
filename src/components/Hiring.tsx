@@ -38,47 +38,6 @@ const Hiring = () => {
     }
   };
 
-  const services = [
-    {
-      title: 'Desarrollo Frontend',
-      description: 'Interfaces modernas y responsivas con React, Vue.js o Angular',
-      price: 'Desde $30/hora',
-      duration: '2-6 semanas',
-      features: [
-        'Diseño responsivo',
-        'Optimización SEO',
-        'Animaciones suaves',
-        'Pruebas unitarias',
-        'Documentación completa'
-      ]
-    },
-    {
-      title: 'Desarrollo Backend',
-      description: 'APIs robustas y escalables con Node.js, Python o PHP',
-      price: 'Desde $35/hora',
-      duration: '3-8 semanas',
-      features: [
-        'API REST/GraphQL',
-        'Base de datos optimizada',
-        'Autenticación segura',
-        'Monitoreo y logs',
-        'Documentación API'
-      ]
-    },
-    {
-      title: 'Aplicación Completa',
-      description: 'Desarrollo fullstack desde el concepto hasta el despliegue',
-      price: 'Desde $2500',
-      duration: '6-12 semanas',
-      features: [
-        'Desarrollo completo',
-        'Diseño UI/UX',
-        'Hosting y dominio',
-        'SSL y seguridad',
-        'Soporte 3 meses'
-      ]
-    }
-  ];
 
   const process = [
     {
@@ -111,7 +70,7 @@ const Hiring = () => {
     { day: 'Lunes - Viernes', time: '9:00 AM - 6:00 PM' },
     { day: 'Respuesta promedio', time: '< 2 horas' },
     { day: 'Disponibilidad', time: 'Inmediata' },
-    { day: 'Zona horaria', time: 'GMT-5 (Colombia)' }
+    { day: 'Zona horaria', time: 'Barcelona (España)' }
   ];
 
   return (
@@ -123,53 +82,8 @@ const Hiring = () => {
             Servicios de desarrollo
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto fade-in-up">
-            Soluciones técnicas profesionales adaptadas a las necesidades de tu negocio
+            Soluciones técnicas adaptadas a las necesidades de tu negocio
           </p>
-        </div>
-
-        {/* Services */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="hover-lift glass-effect border-border/20 fade-in-up">
-              <CardHeader>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-primary" />
-                      <span className="font-semibold">{service.price}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">{service.duration}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <h4 className="font-medium">Incluye:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-primary" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Button
-                    onClick={() => scrollToSection('contact')}
-                    className="w-full mt-6"
-                  >
-                    Solicitar cotización
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Process */}
@@ -182,7 +96,7 @@ const Hiring = () => {
               <div key={index} className="text-center">
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-primary-foreground">
+                    <div className="text-primary-white">
                       {step.icon}
                     </div>
                   </div>
@@ -229,7 +143,7 @@ const Hiring = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open('https://calendly.com/tu-usuario', '_blank')}
+                onClick={() => window.open('https://calendly.com/johansebastian627/30min', '_blank')}
                 className="w-full"
               >
                 Agendar reunión

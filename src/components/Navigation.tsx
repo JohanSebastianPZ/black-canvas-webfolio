@@ -27,8 +27,8 @@ const Navigation = () => {
     { id: 'hero', label: 'Inicio' },
     { id: 'about', label: 'Sobre mí' },
     { id: 'projects', label: 'Proyectos' },
-    { id: 'hiring', label: 'Contratación' },
-    { id: 'blog', label: 'Blog' },
+    // { id: 'hiring', label: 'Contratación' }, //Proxima implementacion 
+    // { id: 'blog', label: 'Blog' }, // Proxima implementacion
     { id: 'contact', label: 'Contacto' },
   ];
 
@@ -44,7 +44,7 @@ const Navigation = () => {
             className="flex items-center gap-2 text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
             <Code className="w-6 h-6" />
-            <span>DevPortfolio</span>
+            <span>Sebastian Dev</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -67,7 +67,7 @@ const Navigation = () => {
               size="icon"
               variant="ghost"
               className="hover:bg-accent hover:text-accent-foreground"
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/JohanSebastianPZ', '_blank')}
             >
               <Github className="w-5 h-5" />
             </Button>
@@ -75,7 +75,7 @@ const Navigation = () => {
               size="icon"
               variant="ghost"
               className="hover:bg-accent hover:text-accent-foreground"
-              onClick={() => window.open('https://linkedin.com', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/johan-sebastian-martinez-84432637b/', '_blank')}
             >
               <Linkedin className="w-5 h-5" />
             </Button>
@@ -117,14 +117,14 @@ const Navigation = () => {
                 <Button
                   size="icon"
                   variant="ghost"
-                  onClick={() => window.open('https://github.com', '_blank')}
+                  onClick={() => window.open('https://github.com/JohanSebastianPZ', '_blank')}
                 >
                   <Github className="w-5 h-5" />
                 </Button>
                 <Button
                   size="icon"
                   variant="ghost"
-                  onClick={() => window.open('https://linkedin.com', '_blank')}
+                  onClick={() => window.open('https://www.linkedin.com/in/johan-sebastian-martinez-84432637b/', '_blank')}
                 >
                   <Linkedin className="w-5 h-5" />
                 </Button>

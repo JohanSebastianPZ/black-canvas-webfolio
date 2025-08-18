@@ -36,7 +36,7 @@ const Hero = () => {
           
           {/* Name */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient">
-            Desarrollador Web
+            Sebastian Martinez
           </h1>
           
           {/* Tagline */}
@@ -46,15 +46,15 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Especializado en desarrollo frontend y backend, transformo ideas en aplicaciones web modernas, 
-            responsivas y optimizadas que impulsan el crecimiento de tu negocio.
+            Soy desarrollador en formación especializado en frontend y backend. Me apasiona transformar ideas en aplicaciones web modernas, 
+            responsivas y optimizadas, mientras sigo perfeccionando mis habilidades para aportar valor real a cada proyecto.
           </p>
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
               size="lg"
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity group"
+              className="text-primary-foreground hover:opacity-90 transition-opacity group"
               onClick={() => scrollToSection('projects')}
             >
               Ver mis proyectos
@@ -65,7 +65,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors group"
-              onClick={() => window.open('/cv.pdf', '_blank')}
+              onClick={() => window.open('/black-canvas-webfolio/cv.pdf', '_blank')}
             >
               Descargar CV
               <Download className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
@@ -75,20 +75,20 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">5+</div>
-              <div className="text-sm text-muted-foreground">Años de experiencia</div>
+              <div className="text-2xl md:text-2xl font-bold text-primary mb-2">Aprendiendo</div>
+              <div className="text-sm text-muted-foreground">En desarrollo Web</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Proyectos completados</div>
+              <div className="text-2xl md:text-2xl font-bold text-primary mb-2">1+</div>
+              <div className="text-sm text-muted-foreground">Proyectos propios</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">30+</div>
-              <div className="text-sm text-muted-foreground">Clientes satisfechos</div>
+              <div className="text-2xl md:text-2xl font-bold text-primary mb-2">Practicando</div>
+              <div className="text-sm text-muted-foreground">Con clientes ficticios</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Soporte disponible</div>
+              <div className="text-2xl md:text-2xl font-bold text-primary mb-2">Siempre</div>
+              <div className="text-sm text-muted-foreground">Disponible para aprender</div>
             </div>
           </div>
         </div>

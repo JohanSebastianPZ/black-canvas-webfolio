@@ -13,29 +13,29 @@ const Footer = () => {
     { label: 'Inicio', id: 'hero' },
     { label: 'Sobre mí', id: 'about' },
     { label: 'Proyectos', id: 'projects' },
-    { label: 'Blog', id: 'blog' },
+    // { label: 'Blog', id: 'blog' },
     { label: 'Contacto', id: 'contact' }
   ];
 
   const socialLinks = [
     {
       icon: <Github className="w-5 h-5" />,
-      url: 'https://github.com/tu-usuario',
+      url: 'https://github.com/JohansebastianPZ',
       label: 'GitHub'
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
-      url: 'https://linkedin.com/in/tu-usuario',
+      url: 'https://www.linkedin.com/in/johan-sebastian-martinez-84432637b/',
       label: 'LinkedIn'
     },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      url: 'https://twitter.com/tu-usuario',
-      label: 'Twitter'
-    },
+    // {
+    //   icon: <Twitter className="w-5 h-5" />,
+    //   url: 'https://twitter.com/tu-usuario',
+    //   label: 'Twitter'
+    // },
     {
       icon: <Mail className="w-5 h-5" />,
-      url: 'mailto:contacto@tudominio.com',
+      url: 'mailto:johansebastian627@gmail.com',
       label: 'Email'
     }
   ];
@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Code className="w-6 h-6 text-primary" />
-              <span className="text-xl font-bold">DevPortfolio</span>
+              <span className="text-xl font-bold">Sebastian Dev</span>
             </div>
             <p className="text-muted-foreground">
               Desarrollador web especializado en crear experiencias digitales excepcionales.
@@ -90,11 +90,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Servicios</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Desarrollo Frontend</li>
-              <li>Desarrollo Backend</li>
-              <li>Aplicaciones móviles</li>
-              <li>Consultoría técnica</li>
-              <li>Optimización web</li>
+              <li>Frontend en formacion</li>
+              <li>Backend inicial</li>
+              <li>Colaboracion en proyectos</li>
             </ul>
           </div>
 
@@ -102,9 +100,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Contacto</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>contacto@tudominio.com</p>
-              <p>+57 300 123 4567</p>
-              <p>Medellín, Colombia</p>
+              <p>johansebastian627@gmail.com</p>
+              <p>+34 611 877 077</p>
+              <p>Barcelona, España</p>
             </div>
             <Button
               onClick={() => scrollToSection('contact')}
@@ -118,7 +116,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/20 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center gap-1 text-muted-foreground mb-4 md:mb-0">
-            <span>© 2024 DevPortfolio. Hecho con</span>
+            <span>© 2025 Sebastian Dev. Hecho con</span>
             <Heart className="w-4 h-4 text-red-500 fill-current" />
             <span>y mucho café</span>
           </div>

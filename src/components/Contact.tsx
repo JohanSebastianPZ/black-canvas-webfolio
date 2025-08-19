@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -49,35 +50,54 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simular envío de formulario
-    setTimeout(() => {
+  
+    try {
+      await emailjs.send(
+        'service_reb4gv9', // Service ID
+        'template_allkuvh', // Template ID
+        {
+          name: formData.name,
+          email: formData.email, // Este se usará en Reply-To
+          subject: formData.subject,
+          message: formData.message
+        },
+        'jOpHaw-DDzWg_OzKB' // Public KEY
+      );
+  
       toast({
         title: '¡Mensaje enviado!',
         description: 'Te responderé lo antes posible. ¡Gracias por contactarme!',
       });
+  
       setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: 'Error al enviar',
+        description: 'No se pudo enviar el mensaje. Intenta más tarde.',
+        variant: 'destructive',
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'contacto@tudominio.com',
-      link: 'mailto:contacto@tudominio.com'
+      value: 'johansebastian627@gmail.com',
+      link: 'johansebastian627@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Teléfono',
-      value: '+57 300 123 4567',
-      link: 'tel:+573001234567'
+      value: '+34 611 877 077',
+      link: 'tel:+34611877077'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Ubicación',
-      value: 'Medellín, Colombia',
+      value: 'Barcelona, España',
       link: 'https://maps.google.com'
     }
   ];
@@ -86,21 +106,21 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       name: 'GitHub',
-      url: 'https://github.com/tu-usuario',
+      url: 'https://github.com/JohansebastianPZ',
       color: 'hover:text-purple-400'
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/tu-usuario',
+      url: 'https://www.linkedin.com/in/johan-sebastian-martinez-84432637b/',
       color: 'hover:text-blue-400'
     },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      name: 'Twitter',
-      url: 'https://twitter.com/tu-usuario',
-      color: 'hover:text-sky-400'
-    }
+    // { Esa parte no aplica por ahora
+    //   icon: <Twitter className="w-5 h-5" />,
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/tu_usuario',
+    //   color: 'hover:text-sky-400'
+    // }
   ];
 
   return (
@@ -192,7 +212,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:opacity-90"
+                  className="w-full hover:opacity-90"
                   size="lg"
                 >
                   {isSubmitting ? (
@@ -219,7 +239,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-white">
                       {item.icon}
                     </div>
                     <div>
@@ -282,7 +302,7 @@ const Contact = () => {
                     Agenda una reunión de 30 minutos para discutir tu proyecto
                   </p>
                   <Button
-                    onClick={() => window.open('https://calendly.com/tu-usuario', '_blank')}
+                    onClick={() => window.open('https://calendly.com/johansebastian627/30min', '_blank')}
                     className="w-full"
                   >
                     Agendar reunión

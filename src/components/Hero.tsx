@@ -46,8 +46,8 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Soy desarrollador en formación especializado en frontend y backend. Me apasiona transformar ideas en aplicaciones web modernas, 
-            responsivas y optimizadas, mientras sigo perfeccionando mis habilidades para aportar valor real a cada proyecto.
+            Soy desarrollador en formación, especializado en frontend y backend. Me apasiona transformar ideas en aplicaciones web modernas, 
+            responsivas y optimizadas, me apasiona seguir perfeccionando mis habilidades para aportar valor real a cada proyecto.
           </p>
           
           {/* Action Buttons */}

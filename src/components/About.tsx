@@ -82,9 +82,9 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-4">Mi historia</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Soy un desarrollador web en formación con muchas ganas de aprender y 
-                crecer en el mundo de la tecnología. Durante mi aprendizaje he trabajado 
-                en proyectos personales y ejercicios que me han permitido conocer las 
-                bases del desarrollo web y las herramientas modernas.
+                crecer en el mundo de la tecnología. Durante mi aprendizaje, he 
+                trabajado en proyectos personales y ejercicios que me han permitido 
+                afianzar las bases del desarrollo web y conocer herramientas modernas.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Mi objetivo es seguir mejorando cada día, escribir código limpio y 
@@ -92,9 +92,9 @@ const About = () => {
                 con otros y resolviendo problemas del mundo real.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Cuando no estoy estudiando o practicando, me gusta explorar nuevas 
-                tecnologías, leer sobre tendencias del sector y compartir lo que 
-                voy aprendiendo con otros.
+                Cuando no estoy estudiando o practicando, disfruto explorando 
+                nuevas tecnologías, leyendo sobre tendencias del sector y 
+                compartiendo lo que aprendo con otros.
               </p>
             </div>
 

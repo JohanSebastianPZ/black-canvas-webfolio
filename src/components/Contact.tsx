@@ -132,7 +132,7 @@ const Contact = () => {
             Contacto
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto fade-in-up">
-            ¿Tienes un proyecto en mente? Me encantaría escuchar sobre él y ayudarte a hacerlo realidad
+            ¿Tienes un proyecto en mente? Me encantaría conocerlo y ayudarte a hacerlo realidad.
           </p>
         </div>
 

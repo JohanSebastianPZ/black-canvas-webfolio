@@ -126,7 +126,7 @@ const Projects = () => {
   <div className="text-center py-10 border rounded-2xl bg-accent/10">
     <h3 className="text-2xl font-bold mb-4">🚧 Proyectos en camino</h3>
     <p className="text-muted-foreground">
-      Estoy aprendiendo y trabajando en mis primeros proyectos. Muy pronto podrás verlos aquí.
+      Actualmente estoy construyendo mis primeros proyectos prácticos. Pronto estarán disponibles aquí.
     </p>
   </div>
 </div>

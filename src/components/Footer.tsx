@@ -106,7 +106,7 @@ const Footer = () => {
             </div>
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full bg-gradient-primary hover:opacity-90"
+              className="w-full  hover:opacity-90"
             >
               Iniciar proyecto
             </Button>

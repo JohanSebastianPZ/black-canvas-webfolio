@@ -123,7 +123,7 @@ const About = () => {
           {/* Image Placeholder */}
           <div className="fade-in-up">
             <div className="relative">
-            <div className="aspect-square bg-gradient-accent rounded-2xl flex items-center justify-center overflow-hidden min-w-[500px] min-h-[500px]">  
+            <div className="aspect-square bg-gradient-accent rounded-2xl flex items-center justify-center overflow-hidden min-w-[400px] min-h-[400px]">  
                   <img
                     src="./imagen.png"
                     alt="Mi imagen"
